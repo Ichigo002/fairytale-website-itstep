@@ -20,7 +20,6 @@
         <div >
 
             @foreach($listItems as $listItem)
-    
                 <p>Item: {{ $listItem->name }}</p><br>
             @endforeach 
 
@@ -30,8 +29,10 @@
                 <label for="listItem">New Item thing</lobel>
                 </br>
                 <input style="color: black;" type="text" name="listItem"/>
-                <button type="submit">save item</button>
+                <button type="submit" style="border:#fff; background-color:#9ca3af; padding: 5px;">save item</button>
             </form>
+
+
         </div>
     </body>
 </html>

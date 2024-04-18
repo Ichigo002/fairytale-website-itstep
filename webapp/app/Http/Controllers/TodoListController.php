@@ -19,6 +19,6 @@ class TodoListController extends Controller
         $newListItem->name = $request->listItem;
         $newListItem->is_complete = 0;
         $newListItem->save();
-        return view("welcome");
+        return view("welcome", ['listItems' => ListItem::all()]);
     }
 }
