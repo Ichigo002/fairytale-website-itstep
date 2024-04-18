@@ -17,7 +17,13 @@
     </head>
     <body class="font-sans antialiased dark:bg-black dark:text-white/50" style="background-color: #333; color: #fff;">
         <br><br><br><br><br>
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
+        <div >
+
+            @foreach($listItems as $listItem)
+    
+                <p>Item: {{ $listItem->name }}</p><br>
+            @endforeach 
+
             <h1>To od list</h1>
             <form method="post" action="{{ route('saveItem') }}" accept-charset="UTF-8">
                 {{ csrf_field() }}
