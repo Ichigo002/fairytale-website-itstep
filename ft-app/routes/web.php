@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PrivilegeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\VerifyAdminPrivilege;
 use App\Http\Middleware\VerifyRootPrivilege;
@@ -13,9 +14,18 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/privileges', function () {
-    return view('privileges');
-})->middleware(['auth', 'verified', VerifyRootPrivilege::class])->name('privileges');
+
+Route::middleware(['auth', VerifyRootPrivilege::class])->group(function () {
+    Route::get('/privileges', [PrivilegeController::class, 'index'])->name('privileges.show');
+    Route::get('/privileges', [PrivilegeController::class, 'update_user'])->name('privileges.update');
+    //Route::delete('/privileges', [PrivilegeController::class, 'destroy'])->name('profile.destroy');
+});
+
+
+//Route::get('/privileges', [PrivilegeController::class, 'index'])
+      //  ->middleware(['auth', 'verified', VerifyRootPrivilege::class])->name('privileges');
+
+
 
 Route::get('/fairytales_manager', function () {
     return view('fairytales_manager');
