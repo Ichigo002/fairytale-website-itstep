@@ -1,0 +1,4 @@
+there is cascade mode in deleting on database.
+If you delete a admin user, you lose all fairytales which was added by this user!
+Delete USER == Delete Fairytale
+Delete USER == Delete Uploaded Images

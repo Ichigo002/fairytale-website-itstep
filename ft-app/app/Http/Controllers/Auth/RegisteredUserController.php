@@ -33,11 +33,15 @@ class RegisteredUserController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'date' => ['required', 'date', 'before_or_equal:' . now()->subYears(13)->format('Y-m-d')],
+        ], [
+            'date.before_or_equal' => 'You must be at least 13 years old to register.',
         ]);
 
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
+            'date_of_birth' => $request->date,
             'password' => Hash::make($request->password),
         ]);
 

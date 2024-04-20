@@ -15,3 +15,8 @@ Now only you just need go to *ft-app* where is main project and type in terminal
 ### How to upload the website on the server?
 
 You need optimize this and copy whole project on server. And change in *ft-app/.env* file, the data to connect with your database MySql on server. Upload also database file .sql from this folder.
+
+## Email Verification
+
+Current email used to verify: wiktorbojanowski2006@gmail.com
+If you need change email used to send verifications, you need go to *ft-app/.env* and change all variables starting on MAIL_ word.
