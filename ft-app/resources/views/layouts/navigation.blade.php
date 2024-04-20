@@ -15,6 +15,15 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('privileges')" :active="request()->routeIs('privileges')">
+                        {{ __('Manage Privileges') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('fairytales_manager')" :active="request()->routeIs('fairytales_manager')">
+                        {{ __('Manage Fairytales') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('authors_manager')" :active="request()->routeIs('authors_manager')">
+                        {{ __('Manage Authors') }}
+                    </x-nav-link>
                 </div>
             </div>
 
