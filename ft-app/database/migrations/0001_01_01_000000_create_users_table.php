@@ -18,6 +18,14 @@ return new class extends Migration
             $table->date("birth_date");
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->date('date_of_birth');
+            $table->integer('role')->default(1); 
+            /*
+            1 - standard user role. add own images, etc.
+            4 - standard admin - can create, edit, delete ONLY his fairytales.
+            6 - super root, administrator, can create, delete, edit every fairytale
+            */
+
             $table->rememberToken();
             $table->timestamps();
         });
