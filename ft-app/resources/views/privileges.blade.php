@@ -54,7 +54,9 @@
                                 <option value="root" {{ $usr->role == 6 ? 'selected' : '' }} >Root</option>
                             </select>
                             <input type="hidden" name="user_id" value="{{ $usr->id }}"/>
-                            <button class="btn" type="submit">Apply Change</button>
+                            <div class="flex items-center gap-4">
+                                    <x-primary-button>{{ __('Apply Change') }}</x-primary-button>
+                                </div>
                         </form>
                         
                     </div>

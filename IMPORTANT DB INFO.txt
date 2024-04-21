@@ -7,5 +7,5 @@ when role gets higher, then user has more privileges
 
 
 standard user role == 1 -- add own images
-administrator role == 4 -- add own images, create new fairytales
+administrator role == 4 -- add own images, create new fairytales, edit authors
 super root    role == 6   -- add own images, create new fairytales, edit & delete users' fairytales, grant privileges

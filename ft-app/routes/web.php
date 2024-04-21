@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthorsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PrivilegeController;
 use Illuminate\Support\Facades\Route;
@@ -15,12 +16,21 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 
-Route::middleware('auth')->group(function () {
+Route::middleware(['auth', VerifyRootPrivilege::class])->group(function () {
     Route::get('/privileges', [PrivilegeController::class, 'index'])->name('privileges.index');
     Route::post('/privileges/update', [PrivilegeController::class, 'update'])->name('privileges.update');
     Route::post('/privileges/destroy', [PrivilegeController::class, 'destroy'])->name('privileges.destroy');
 });
 
+Route::middleware(['auth', VerifyAdminPrivilege::class])->group(function () {
+    Route::get('/authors', [AuthorsController::class, 'index'])->name('authors.index');
+    Route::get('/authors/detail', [AuthorsController::class, 'detail'])->name('authors.detail');
+    Route::get('/authors/edit', [AuthorsController::class, 'edit'])->name('authors.edit');
+    Route::post('/authors/update', [AuthorsController::class, 'update'])->name('authors.update');
+    Route::get('/authors/delete', [AuthorsController::class, 'delete'])->name('authors.delete');
+    Route::get('/authors/creator', [AuthorsController::class, 'open_creator'])->name('authors.creator');
+    Route::post('/authors/create', [AuthorsController::class, 'create'])->name('authors.create');
+});
 
 //Route::get('/privileges', [PrivilegeController::class, 'index'])
       //  ->middleware(['auth', 'verified', VerifyRootPrivilege::class])->name('privileges');

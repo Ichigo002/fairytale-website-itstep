@@ -21,7 +21,7 @@
                     <x-nav-link :href="route('fairytales_manager')" :active="request()->routeIs('fairytales_manager')">
                         {{ __('Manage Fairytales') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('authors_manager')" :active="request()->routeIs('authors_manager')">
+                    <x-nav-link :href="route('authors.index')" :active="request()->routeIs('authors')">
                         {{ __('Manage Authors') }}
                     </x-nav-link>
                 </div>

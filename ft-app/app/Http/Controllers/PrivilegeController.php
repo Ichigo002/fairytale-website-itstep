@@ -32,7 +32,7 @@ class PrivilegeController extends Controller
                 $role = 6;
                 break;
             default:
-                abort(666, 'Incorrect value passed by form.');
+                abort(400, 'Incorrect value passed by form.');
         }
 
 
