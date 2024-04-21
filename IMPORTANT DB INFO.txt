@@ -2,3 +2,10 @@ there is cascade mode in deleting on database.
 If you delete a admin user, you lose all fairytales which was added by this user!
 Delete USER == Delete Fairytale
 Delete USER == Delete Uploaded Images
+
+when role gets higher, then user has more privileges
+
+
+standard user role == 1 -- add own images
+administrator role == 4 -- add own images, create new fairytales, edit authors
+super root    role == 6   -- add own images, create new fairytales, edit & delete users' fairytales, grant privileges
