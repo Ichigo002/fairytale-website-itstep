@@ -15,15 +15,21 @@
                     <x-nav-link :href="route('profile.edit')" :active="request()->routeIs('profile')">
                         {{ __('Your Profile') }}
                     </x-nav-link>
+                    @if(auth()->user()->role == 6)
                     <x-nav-link :href="route('privileges.index')" :active="request()->routeIs('privileges')">
                         {{ __('Manage Privileges') }}
                     </x-nav-link>
+                    @endif
+                    @if(auth()->user()->role >= 4)
                     <x-nav-link :href="route('fairytales_manager')" :active="request()->routeIs('fairytales_manager')">
                         {{ __('Manage Fairytales') }}
                     </x-nav-link>
+                    
                     <x-nav-link :href="route('authors.index')" :active="request()->routeIs('authors')">
                         {{ __('Manage Authors') }}
                     </x-nav-link>
+                    @endif
+
                 </div>
             </div>
 
