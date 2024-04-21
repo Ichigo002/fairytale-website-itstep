@@ -15,7 +15,7 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('privileges.show')" :active="request()->routeIs('privileges')">
+                    <x-nav-link :href="route('privileges.index')" :active="request()->routeIs('privileges')">
                         {{ __('Manage Privileges') }}
                     </x-nav-link>
                     <x-nav-link :href="route('fairytales_manager')" :active="request()->routeIs('fairytales_manager')">

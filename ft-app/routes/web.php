@@ -15,10 +15,10 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 
-Route::middleware(['auth', VerifyRootPrivilege::class])->group(function () {
-    Route::get('/privileges', [PrivilegeController::class, 'index'])->name('privileges.show');
-    Route::get('/privileges', [PrivilegeController::class, 'update_user'])->name('privileges.update');
-    //Route::delete('/privileges', [PrivilegeController::class, 'destroy'])->name('profile.destroy');
+Route::middleware('auth')->group(function () {
+    Route::get('/privileges', [PrivilegeController::class, 'index'])->name('privileges.index');
+    Route::post('/privileges/update', [PrivilegeController::class, 'update'])->name('privileges.update');
+    Route::post('/privileges/destroy', [PrivilegeController::class, 'destroy'])->name('privileges.destroy');
 });
 
 
