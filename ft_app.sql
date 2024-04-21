@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 20, 2024 at 07:13 PM
+-- Generation Time: Apr 21, 2024 at 12:50 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -30,12 +30,19 @@ SET time_zone = "+00:00";
 CREATE TABLE `authors` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `name` varchar(255) NOT NULL,
-  `biography` text NOT NULL,
+  `biography` text DEFAULT NULL,
   `date_of_birth` date NOT NULL,
   `place_of_live` varchar(255) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `authors`
+--
+
+INSERT INTO `authors` (`id`, `name`, `biography`, `date_of_birth`, `place_of_live`, `created_at`, `updated_at`) VALUES
+(2, 'wiktor', 'училището е хубаво, обичам те\r\n                    huj ci w dupe', '2024-04-13', 'swietno', '2024-04-21 05:52:50', '2024-04-21 05:54:58');
 
 -- --------------------------------------------------------
 
@@ -54,10 +61,12 @@ CREATE TABLE `cache` (
 --
 
 INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
-('356a192b7913b04c54574d18c28d46e6395428ab', 'i:1;', 1713535596),
-('356a192b7913b04c54574d18c28d46e6395428ab:timer', 'i:1713535596;', 1713535596),
-('77de68daecd823babbb58edb1c8e14d7106e83bb', 'i:1;', 1713535959),
-('77de68daecd823babbb58edb1c8e14d7106e83bb:timer', 'i:1713535959;', 1713535959);
+('dwdwd@wpd.pl|127.0.0.1', 'i:1;', 1713696046),
+('dwdwd@wpd.pl|127.0.0.1:timer', 'i:1713696046;', 1713696046),
+('w@wp.pl|127.0.0.1', 'i:1;', 1713696101),
+('w@wp.pl|127.0.0.1:timer', 'i:1713696101;', 1713696101),
+('wwwwdw@wp.pl|127.0.0.1', 'i:1;', 1713691536),
+('wwwwdw@wp.pl|127.0.0.1:timer', 'i:1713691536;', 1713691536);
 
 -- --------------------------------------------------------
 
@@ -196,9 +205,8 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('Q2AUwJsBikLwUc9oQMHXpdOCafFyGHkZBJ7571NH', 4, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiTExnajNRYWxtMEdFbUlVanBzQ3NXRGpsaTZDemtvSUVRMk5aRVZRUyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzA6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9yZWdpc3RlciI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjQ7fQ==', 1713632041),
-('UYiNo3vZ0WmvTiBXAeYHa0Y0qpLRVD4OcgkFacjN', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiNFNubFc2NFdNOU14ZktjZUJiVlBSd09XeE04Snc0MUVLMFc4Sm1NdCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMCI7fX0=', 1713632933),
-('YiLQ5NWXMxLzAc03NtEWUmtnkBKGXyAV5muA31kd', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36', 'YToyOntzOjY6Il90b2tlbiI7czo0MDoiUXU2a01uV3hITWgySnJYSEVRb1lybmZWSjhqVlR4MDRkWHVyb2MwYyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1713632041);
+('bjaRziuVQJAoObmsRSQBuUs8LSxaM30tIq0tnX8p', 9, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiaUFkenhjWkFQYlNVSzBYSVZKd1ljWHN5UjJsRzM5VUhIeHFzR1EwNSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDA6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9mYWlyeXRhbGVzX21hbmFnZXIiO31zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aTo5O30=', 1713691557),
+('x3cMWMcXKXuKgUNEcrNx0QpAe3qaug2Touxdzxq4', 8, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoieUZkbU4zQWtmQ0hMdzVxbXF1WGVrNzdrZUpYOGx6VDNCYlR2UGtRVSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6ODc6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9mYWlyeXRhbGUvY3JlYXRvcj9fdG9rZW49eUZkbU4zQWtmQ0hMdzVxbXF1WGVrNzdrZUpYOGx6VDNCYlR2UGtRVSI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjg7fQ==', 1713696545);
 
 -- --------------------------------------------------------
 
@@ -239,9 +247,11 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`, `date_of_birth`, `role`) VALUES
-(1, 'wiktor', 'wiktorbojanowski28@wp.pl', '2024-04-19 11:05:36', '$2y$12$teEtx3sUXok..d3MiFHKnOybUtYjJF3VUpgOTLjSB.QtQoFB1cwxS', NULL, '2024-04-19 11:04:49', '2024-04-19 11:05:36', '1900-01-01', 1),
-(2, 'hacker', 'dwdwd@wpd.pl', NULL, '$2y$12$DmNDHimkR5CcuHDLHMOp1Oqb1PzG7KUL5ouWLXEBirR5ZelPzu76W', NULL, '2024-04-19 11:06:18', '2024-04-19 11:06:18', '1900-01-01', 1),
-(3, 'wiktor better', 'genxxvsyy@int.pl', '2024-04-19 11:11:39', '$2y$12$bSShA7Ux4oavH9oe/ik1mO.l0vYVt51PZmhLIHPj1Yb8DTPWR1qvm', NULL, '2024-04-19 11:08:56', '2024-04-19 11:11:39', '1900-01-01', 1);
+(1, 'wiktor', 'wiktorbojanowski28@wp.pl', '2024-04-19 11:05:36', '$2y$12$teEtx3sUXok..d3MiFHKnOybUtYjJF3VUpgOTLjSB.QtQoFB1cwxS', NULL, '2024-04-19 11:04:49', '2024-04-21 05:57:33', '1900-01-01', 4),
+(2, 'hacker', 'dwdwd@wpd.pl', NULL, '$2y$12$DmNDHimkR5CcuHDLHMOp1Oqb1PzG7KUL5ouWLXEBirR5ZelPzu76W', NULL, '2024-04-19 11:06:18', '2024-04-21 04:00:10', '1900-01-01', 1),
+(3, 'wiktor better', 'genxxvsyy@int.pl', '2024-04-19 11:11:39', '$2y$12$bSShA7Ux4oavH9oe/ik1mO.l0vYVt51PZmhLIHPj1Yb8DTPWR1qvm', NULL, '2024-04-19 11:08:56', '2024-04-19 11:11:39', '1900-01-01', 1),
+(8, 'wqewqe', 'wdw@wp.pl', NULL, '$2y$12$2yFhPCxIqCJ7cMVQbPIqr.gkYyXgav4S8HMpWzhC.UFDgcpeTHKsq', NULL, '2024-04-20 14:21:11', '2024-04-20 14:21:11', '2001-01-02', 6),
+(9, 'wdawd', 'wwwwwdw@wp.pl', NULL, '$2y$12$ror.Km6fBaMI8Mbe1K2EBuvBJ2uxRTPJre3egVpELqQJhVWXZBQVa', NULL, '2024-04-21 06:14:09', '2024-04-21 06:24:08', '1997-10-15', 4);
 
 --
 -- Indexes for dumped tables
@@ -332,7 +342,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `authors`
 --
 ALTER TABLE `authors`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -368,7 +378,7 @@ ALTER TABLE `uploaded_images`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
