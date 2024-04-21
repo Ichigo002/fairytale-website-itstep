@@ -21,7 +21,7 @@
                     </x-nav-link>
                     @endif
                     @if(auth()->user()->role >= 4)
-                    <x-nav-link :href="route('fairytales_manager')" :active="request()->routeIs('fairytales_manager')">
+                    <x-nav-link :href="route('fairytale.index')" :active="request()->routeIs('fairytales_manager')">
                         {{ __('Manage Fairytales') }}
                     </x-nav-link>
                     

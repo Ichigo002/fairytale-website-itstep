@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FairytaleController;
 use App\Http\Controllers\AuthorsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PrivilegeController;
@@ -37,9 +38,16 @@ Route::middleware(['auth', VerifyAdminPrivilege::class])->group(function () {
 
 
 
-Route::get('/fairytales_manager', function () {
-    return view('fairytales_manager');
-})->middleware(['auth', 'verified', VerifyAdminPrivilege::class])->name('fairytales_manager');
+
+Route::middleware(['auth', VerifyAdminPrivilege::class])->group(function () {
+    Route::get('/fairytale', [FairytaleController::class, 'index'])->name('fairytale.index');
+    Route::get('/fairytale/detail', [FairytaleController::class, 'detail'])->name('fairytale.detail');
+    Route::get('/fairytale/edit', [FairytaleController::class, 'edit'])->name('fairytale.edit');
+    Route::post('/fairytale/update', [FairytaleController::class, 'update'])->name('fairytale.update');
+    Route::get('/fairytale/delete', [FairytaleController::class, 'delete'])->name('fairytale.delete');
+    Route::get('/fairytale/creator', [FairytaleController::class, 'open_creator'])->name('fairytale.creator');
+    Route::post('/fairytale/create', [FairytaleController::class, 'create'])->name('fairytale.create');
+});
 
 Route::get('/authors_manager', function () {
     return view('authors_manager');
