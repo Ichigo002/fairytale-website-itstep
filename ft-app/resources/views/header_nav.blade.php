@@ -1,7 +1,7 @@
 <header>
       <div class="logo">
       <a href="{{ route('home') }}">
-       <img class="logo-img" src="{{asset('build/assets/images/Thumbnail.png')}}"/>
+       <img class="logo-img" src="{{asset('build/assets/images/book/frontcover.png')}}"/>
         </a>  
     </div>
       <!-- add this to your header -->

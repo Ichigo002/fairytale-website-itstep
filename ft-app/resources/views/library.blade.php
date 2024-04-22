@@ -16,6 +16,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
         <!-- Styles -->
+        <link href="{{asset('build/assets/css/custom.css')}}" rel="stylesheet" type="text/css"/>
         <link href="{{asset('build/assets/css/customlibrary.css')}}" rel="stylesheet" type="text/css"/>
         <link href="{{asset('build/assets/css/book.css')}}" rel="stylesheet" type="text/css"/>
 
@@ -24,17 +25,7 @@
 
     <body>
    <div class="container1">
-     <header>
-      <div class="logo">
-       <img class="logo-img" src="{{asset('build/assets/images/book/frontcover.png')}}"/>
-      </div>
-      <div class="menu-bar">
-       <p class="menu-items">Registrazione</p>
-       <p class="menu-items">Libri</p>
-       <p class="menu-items">Negozio</p>
-       <p class="menu-items"><a href="{{ route('profile.edit') }}">{{ __('Profilo') }}</a></p>
-      </div>
-     </header>
+        @include("header_nav")
 
      <br/>
 
@@ -66,19 +57,6 @@
     <br/>
     <br/>
 
-    <footer>
-      <div class="footer_items">
-        <h3>Infromatzione</h3>
-      </div>
-      <div class="footer_items">
-        <h3>Link veloci</h3>
-      </div>
-      <div class="footer_items">
-        <h3>ultime voci</h3>
-      </div>
-    </footer>
-      <div class="lower_footer">
-        <p>Kacper i Wiktor inc. - Copyright Claim</p>
-      </div>
+    @include('footer')
     </body>
 </html>

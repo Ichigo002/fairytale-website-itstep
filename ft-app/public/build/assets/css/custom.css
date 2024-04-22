@@ -7,8 +7,14 @@
     --evendarkergrey: #151515;
 }
 
+#google_translate_element{
+    position:absolute;
+    top:15px;
+    right:25px;
+}
+
 a{
-    color:var(--black);
+    color:var(--black); 
     text-decoration: none;
 }
 
