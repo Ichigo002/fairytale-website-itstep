@@ -1,7 +1,9 @@
 <header>
       <div class="logo">
+      <a href="{{ route('home') }}">
        <img class="logo-img" src="{{asset('build/assets/images/Thumbnail.png')}}"/>
-      </div>
+</a>  
+    </div>
       <!-- add this to your header -->
        <div id="google_translate_element"></div> 
       <div class="menu-bar">
