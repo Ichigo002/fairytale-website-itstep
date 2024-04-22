@@ -7,8 +7,7 @@
       <!-- add this to your header -->
        <div id="google_translate_element"></div> 
       <div class="menu-bar">
-       <p class="menu-items"><a href="{{ route('library.index') }}">{{ __('Libri') }}</a></p>
-       <p class="menu-items">Negozio</p>
+       <p class="menu-items"><a href="{{ route('library.index') }}">{{ __('Library') }}</a></p>
        @guest
        <p class="menu-items"><a href="{{ route('register') }}">{{ __('Register') }}</a></p>
        <p class="menu-items"><a href="{{ route('login') }}">{{ __('Login') }}</a></p>

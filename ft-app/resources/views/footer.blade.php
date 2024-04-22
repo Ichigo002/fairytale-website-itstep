@@ -1,12 +1,12 @@
 <footer>
       <div class="footer_items">
-        <h3>Infromatzione</h3>
+        <h3>Informations</h3>
       </div>
       <div class="footer_items">
-        <h3>szybkie linki</h3>
+        <h3>Social Media</h3>
       </div>
       <div class="footer_items">
-        <h3>ultime voci</h3>
+        <h3>The newest books</h3>
       </div>
     </footer>
       <div class="lower_footer">

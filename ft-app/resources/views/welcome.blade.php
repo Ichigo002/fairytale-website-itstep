@@ -27,14 +27,14 @@
    <div class="container1">
           @include("header_nav")
      <div class="LowerHeader">
-        <p>Benvenuto</p>
+        <p>Welcome</p>
      </div>
    </div>
 
       <br/>
       <br/>
 
-    <main> <p class="ultimo_libro">ultimo libro</p>
+    <main> <p class="ultimo_libro">The Neweset book</p>
 
       <br/>
 
