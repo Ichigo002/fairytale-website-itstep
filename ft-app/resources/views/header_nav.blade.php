@@ -2,7 +2,7 @@
       <div class="logo">
       <a href="{{ route('home') }}">
        <img class="logo-img" src="{{asset('build/assets/images/Thumbnail.png')}}"/>
-</a>  
+        </a>  
     </div>
       <!-- add this to your header -->
        <div id="google_translate_element"></div> 
