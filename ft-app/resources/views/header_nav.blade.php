@@ -2,6 +2,8 @@
       <div class="logo">
        <img class="logo-img" src="{{asset('build/assets/images/Thumbnail.png')}}"/>
       </div>
+      <!-- add this to your header -->
+       <div id="google_translate_element"></div> 
       <div class="menu-bar">
        <p class="menu-items"><a href="{{ route('library.index') }}">{{ __('Libri') }}</a></p>
        <p class="menu-items">Negozio</p>
