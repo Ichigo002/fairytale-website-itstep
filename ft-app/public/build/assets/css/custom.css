@@ -1,0 +1,101 @@
+:root{
+    --black:#000;
+    --white:#ffffff;
+    --grey: #333;
+    --greywithopacity05: #33333378;
+    --darkergrey: #242424;
+    --evendarkergrey: #151515;
+}
+
+body{
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    font-family: "Shantell Sans", cursive;
+    margin:0;
+    background-color:var(--white);
+    color:var(--black);
+}
+.container1{
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 25%);
+    height: 600px;
+    width:auto;
+}
+.container1-img{padding:80px 0 0 0;height:600px;width:100%;position:absolute;z-index: -1;opacity:0.4;}
+
+header{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(180deg, rgba(255,255,255,1) 80%, rgba(255,255,255,0) 100%);
+    padding:30px 100px;
+    max-height: 300px;
+}
+.LowerHeader{
+    font-size: 75px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height:440px;
+    max-height:500px;
+}
+
+.logo{}
+.logo-img{max-height: 100px;border-radius:50px;cursor:pointer;}
+.menu-bar{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    font-size:25px;
+    column-gap:5%;
+    min-width: 60%;
+}
+.menu-items{
+    cursor:pointer;
+    padding:10px;
+}
+.menu-items:hover{
+    transition-duration:0.3s;
+    transition-timing-function: linear;
+    translate: 0 -3px;
+    font-size:25px;
+}
+
+main{}
+.ultimo_libro{
+    padding:0 250px;
+    font-size:35px; 
+    margin:10px 0;
+}
+
+footer{
+    padding:10px 10%;
+    width:100% ;
+    display:inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+
+    background: rgb(7,1,55);    
+    color:var(--white);
+    height:300px;
+}
+.footer_items{
+    max-width: 150px;
+}
+
+.lower_footer{
+    background-color:var(--black);
+    color:var(--white);
+    margin:0;
+    font-size:10px;
+    width:100%;
+    height: 13px;
+    text-align:left;
+}
+.lower_footer p{margin:0;padding:0 10px;}
