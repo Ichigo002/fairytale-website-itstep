@@ -27,7 +27,7 @@
    <div class="container1">
      <header>
       <div class="logo">
-       <img class="logo-img" src="{{asset('build/assets/images/Thumbnail.png')}}"/>
+       <img class="logo-img" src="{{asset('build/assets/images/book/frontcover.png')}}"/>
       </div>
       <div class="menu-bar">
        <p class="menu-items">Registrazione</p>

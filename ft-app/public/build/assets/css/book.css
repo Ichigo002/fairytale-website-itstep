@@ -8,7 +8,7 @@
   position: relative;
   display: flex;
   margin: auto;
-  width: 70cqmin;
+  width: 90cqmin;
   /*1* let pointer event go trough pages of lower Z than .book */
   pointer-events: none;
   transform-style: preserve-3d;
