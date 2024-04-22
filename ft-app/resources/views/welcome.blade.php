@@ -25,17 +25,7 @@
     <body>
     <img class="container1-img" src="{{asset('build/assets/images/view.jpg')}}"/>
    <div class="container1">
-     <header>
-      <div class="logo">
-       <img class="logo-img" src="{{asset('build/assets/images/Thumbnail.png')}}"/>
-      </div>
-      <div class="menu-bar">
-       <p class="menu-items">Registrazione</p>
-       <p class="menu-items"><a href="{{ route('library.index') }}">{{ __('Libri') }}</a></p>
-       <p class="menu-items">Negozio</p>
-       <p class="menu-items"><a href="{{ route('profile.edit') }}">{{ __('Profile') }}</a></p>
-      </div>
-     </header>
+          @include("header_nav")
      <div class="LowerHeader">
         <p>Benvenuto</p>
      </div>
@@ -222,19 +212,6 @@
     <br/>
     <br/>
 
-    <footer>
-      <div class="footer_items">
-        <h3>Infromatzione</h3>
-      </div>
-      <div class="footer_items">
-        <h3>szybkie linki</h3>
-      </div>
-      <div class="footer_items">
-        <h3>ultime voci</h3>
-      </div>
-    </footer>
-      <div class="lower_footer">
-        <p>Kacper i Wiktor inc. - Copyright Claim</p>
-      </div>
+    @include("footer")
     </body>
 </html>
