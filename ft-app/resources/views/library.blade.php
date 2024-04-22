@@ -27,17 +27,17 @@
    <div class="container1">
      <header>
       <div class="logo">
-       <img class="logo-img" src="{{asset('build/assets/images/book/frontcover.png')}}"/>
+       <img class="logo-img" src="{{asset('build/assets/images/Thumbnail.png')}}"/>
       </div>
       <div class="menu-bar">
        <p class="menu-items">Registrazione</p>
-       <p class="menu-items"><a href="{{ route('library.index') }}">{{ __('Libri') }}</a></p>
+       <p class="menu-items">Libri</p>
        <p class="menu-items">Negozio</p>
        <p class="menu-items"><a href="{{ route('profile.edit') }}">{{ __('Profile') }}</a></p>
       </div>
      </header>
      <div class="LowerHeader">
-        <p>Benvenuto</p>
+        <p>BIBLA librarsh kjfshkjf</p>
      </div>
    </div>
 
