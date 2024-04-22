@@ -33,7 +33,7 @@
        <p class="menu-items">Registrazione</p>
        <p class="menu-items"><a href="{{ route('library.index') }}">{{ __('Libri') }}</a></p>
        <p class="menu-items">Negozio</p>
-       <p class="menu-items"><a href="{{ route('profile.edit') }}">{{ __('Profile') }}</a></p>
+       <p class="menu-items"><a href="{{ route('profile.edit') }}">{{ __('Profilo') }}</a></p>
       </div>
      </header>
      <div class="LowerHeader">
@@ -227,7 +227,7 @@
         <h3>Infromatzione</h3>
       </div>
       <div class="footer_items">
-        <h3>szybkie linki</h3>
+        <h3>Link veloci</h3>
       </div>
       <div class="footer_items">
         <h3>ultime voci</h3>

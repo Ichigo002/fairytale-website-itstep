@@ -8,7 +8,6 @@
 }
 
 a{
-    color:var(--black);
     text-decoration: none;
 }
 
@@ -30,7 +29,6 @@ body{
     height: 600px;
     width:auto;
 }
-.container1-img{padding:80px 0 0 0;height:600px;width:100%;position:absolute;z-index: -1;opacity:0.4;}
 
 header{
     display:flex;
@@ -42,15 +40,7 @@ header{
     padding:30px 100px;
     max-height: 300px;
 }
-.LowerHeader{
-    font-size: 75px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height:440px;
-    max-height:500px;
-}
+
 
 .logo{}
 .logo-img{max-height: 100px;border-radius:50px;cursor:pointer;}
@@ -75,12 +65,35 @@ header{
     font-size:25px;
 }
 
-main{}
-.ultimo_libro{
-    padding:0 250px;
-    font-size:35px; 
-    margin:10px 0;
+main{
+    display:grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    gap: 50px;
+    padding: 20px 250px;
 }
+a:visited{color:var(--black);}
+.grid_elements {
+    text-decoration: none;
+    cursor:pointer;
+    border-radius:6%;
+    background-color:var(--white);
+    text-align: center;
+    padding: 20px 40px;
+    font-size: 15px;
+    height:300px;
+    max-height: 300px;
+    -webkit-box-shadow: 5px 7px 16px 2px rgba(122,122,122,0.88);
+-moz-box-shadow: 5px 7px 16px 2px rgba(122,122,122,0.88);
+box-shadow: 5px 7px 16px 2px rgba(122,122,122,0.88);
+  }
+.grid_elements h3,p{text-align:left;margin:5px 0;}
+.grid_elements p{text-align:left;padding:2px 0;}
+.grid_elements img{height:200px;border-radius:3%;object-fit: cover;}
+
+
+
+
 
 footer{
     padding:10px 10%;
