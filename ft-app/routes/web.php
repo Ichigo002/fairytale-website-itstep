@@ -1,10 +1,15 @@
 <?php
 
+use App\Http\Controllers\LibraryController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+})->name("home");
+
+Route::prefix("library")->name("library.")->group(function () {
+    Route::get('/index', [LibraryController::class, 'index'])->name("index");
 });
 
 Route::get('/dashboard', function () {
