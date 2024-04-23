@@ -12,6 +12,7 @@ Route::prefix("library")->name("library.")->group(function () {
     Route::get('/index', [LibraryController::class, 'index'])->name("index");
     Route::get('/read/{id}', [LibraryController::class, 'read'])->name("read");
     Route::get('/book_creator', [LibraryController::class, 'book_creator'])->name("book_creator");
+    Route::post('/add', [LibraryController::class, 'add'])->name("add");
 });
 
 Route::get('/dashboard', function () {

@@ -34,7 +34,7 @@
       <br/>
       <br/>
 
-    <main> <p class="ultimo_libro">DAS IST READER BUCH!</p>
+    <main> <p class="ultimo_libro">DAS IST READER BO</p>
 
       <br/>
 

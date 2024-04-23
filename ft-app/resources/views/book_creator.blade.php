@@ -23,194 +23,25 @@
 
 
     <body>
-    <img class="container1-img" src="{{asset('build/assets/images/view.jpg')}}"/>
    <div class="container1">
           @include("header_nav")
-     <div class="LowerHeader">
-        <p>Welcome</p>
-     </div>
    </div>
 
-      <br/>
-      <br/>
+   <main>
+   <form id="imageForm" action="{{ route('library.add') }}" method="POST" enctype="multipart/form-data">
+        @csrf
+        <label for="title">Title:</label>
+        <x-text-input id="title" class="block mt-1 w-full" type="title" name="title" required autofocus />
+        <label for="desc">Short description:</label>
+        <textarea id="desc" name="desc" rows="3" cols="30"></textarea>
+        <label for="fileup">Choose many images with names s0, s1, s2 etc. s0 == cover page</label>
+        <input type="file" id="fileup" name="fileup" multiple/>
+    <button type="submit">Upload Images and create book.</button>
+</form>
 
-    <main> <p class="ultimo_libro">DAS IST BOOK CREATUNG!</p>
+   </form>
 
-      <br/>
-
-<div class="book">  <!--Flipbook-->
-  <div class="page">
-    <div class="front cover" style="background: radial-gradient(circle farthest-corner at 80% 20%, hsl(150 80% 20% / .3) 0%, hsl(170 60% 10% / .1) 100%),
-    hsl(231, 32%, 29%) url('{{asset('build/assets/images/book/frontcover.png')}}') 50% / cover;">
-    </div>
-    <div class="back">
-      <img src="build/assets/images/book/s1.jpg" alt="Img 1"/>
-    </div>
-  </div>
-  <div class="page">
-    <div class="front">
-      <img src="build/assets/images/book/s2.jpg" alt="Img 1"/>
-    </div>
-    <div class="back">
-      <img src="build/assets/images/book/s3.jpg" alt="Img 1">
-    </div>
-  </div>
-
-  <div class="page">
-    <div class="front">
-      <img src="build/assets/images/book/s4.jpg" alt="Img 1">
-    </div>
-    <div class="back">
-      <img src="build/assets/images/book/s5.jpg" alt="Img 1">
-    </div>
-  </div>
-
-  <div class="page">
-    <div class="front">
-      <img src="build/assets/images/book/s6.jpg" alt="Img 1">
-    </div>
-    <div class="back">
-      <img src="build/assets/images/book/s7.jpg" alt="Img 1">
-    </div>
-  </div>
-  
-  <div class="page">
-    <div class="front">
-      <img src="build/assets/images/book/s8.jpg" alt="Img 1">
-    </div>
-    <div class="back">
-      <img src="build/assets/images/book/s9.jpg" alt="Img 1">
-    </div>
-  </div>
-
-  <div class="page">
-    <div class="front">
-      <img src="build/assets/images/book/s10.jpg" alt="Img 1">
-    </div>
-    <div class="back">
-      <img src="build/assets/images/book/s11.jpg" alt="Img 1">
-    </div>
-  </div>
-
-  <div class="page">
-    <div class="front">
-      <img src="build/assets/images/book/s12.jpg" alt="Img 1">
-    </div>
-    <div class="back">
-      <img src="build/assets/images/book/s13.jpg" alt="Img 1">
-    </div>
-  </div>
-
-  <div class="page">
-    <div class="front">
-      <img src="build/assets/images/book/s14.jpg" alt="Img 1">
-    </div>
-    <div class="back">
-      <img src="build/assets/images/book/s15.jpg" alt="Img 1">
-    </div>
-  </div>
-
-  <div class="page">
-    <div class="front">
-      <img src="build/assets/images/book/s16.jpg" alt="Img 1">
-    </div>
-    <div class="back">
-      <img src="build/assets/images/book/s17.jpg" alt="Img 1">
-    </div>
-  </div>
-
-  <div class="page">
-    <div class="front">
-      <img src="build/assets/images/book/s18.jpg" alt="Img 1">
-    </div>
-    <div class="back">
-      <img src="build/assets/images/book/s19.jpg" alt="Img 1">
-    </div>
-  </div>
-
-  <div class="page">
-    <div class="front">
-      <img src="build/assets/images/book/s20.jpg" alt="Img 1">
-    </div>
-    <div class="back">
-      <img src="build/assets/images/book/s21.jpg" alt="Img 1">
-    </div>
-  </div>
-
-  <div class="page">
-    <div class="front">
-      <img src="build/assets/images/book/s22.jpg" alt="Img 1">
-    </div>
-    <div class="back">
-      <img src="build/assets/images/book/s23.jpg" alt="Img 1">
-    </div>
-  </div>
-
-  <div class="page">
-    <div class="front">
-      <img src="build/assets/images/book/s24.jpg" alt="Img 1">
-    </div>
-    <div class="back">
-      <img src="build/assets/images/book/s25.jpg" alt="Img 1">
-    </div>
-  </div>
-
-  <div class="page">
-    <div class="front">
-      <img src="build/assets/images/book/s26.jpg" alt="Img 1">
-    </div>
-    <div class="back">
-      <img src="build/assets/images/book/s27.jpg" alt="Img 1">
-    </div>
-  </div>
-
-  <div class="page">
-    <div class="front">
-      <img src="build/assets/images/book/s28.jpg" alt="Img 1">
-    </div>
-    <div class="back">
-      <img src="build/assets/images/book/s29.jpg" alt="Img 1">
-    </div>
-  </div>
-
-  <div class="page">
-    <div class="front">
-      <img src="build/assets/images/book/s30.jpg" alt="Img 1">
-    </div>
-    <div class="back">
-      <img src="build/assets/images/book/s31.jpg" alt="Img 1">
-    </div>
-  </div>
-
-  <div class="page">
-    <div class="front">
-      <img src="build/assets/images/book/s32.jpg" alt="Img 1">
-    </div>
-    <div class="back">
-      <img src="build/assets/images/book/s33.jpg" alt="Img 1">
-    </div>
-  </div>
-
-  <div class="page">
-    <div class="front">
-      <img src="build/assets/images/book/s34.jpg" alt="Img 2">
-    </div>
-    <div class="back cover" style="background: radial-gradient(circle farthest-corner at 80% 20%, hsl(150 80% 20% / .3) 0%, hsl(170 60% 10% / .1) 100%),
-    hsl(231, 32%, 29%) url('{{asset('build/assets/images/book/backcover.jpg')}}') 50% / cover;">
-      <h3></h3>
-      <p><br>
-      <br><br>
-      <br></p>
-    </div>
-  </div>
-</div>
-</div> <script src="{{ URL::asset('build/assets/js/book.js') }}" type="text/javascript"></script>
-
-    </main>
-
-    <br/>
-    <br/>
-    <br/>
+   </main>
 
     @include("footer")
     </body>
