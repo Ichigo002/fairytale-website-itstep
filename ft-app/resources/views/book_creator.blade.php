@@ -34,7 +34,7 @@
         <x-text-input id="title" class="block mt-1 w-full" type="title" name="title" required autofocus />
         <label for="desc">Short description:</label>
         <textarea id="desc" name="desc" rows="3" cols="30"></textarea>
-        <label for="fileup">Choose many images with names s0, s1, s2 etc. s0 == cover page</label>
+        <label for="fileup">Choose many images with names s0., s1, s2 etc. s0 == cover page</label>
         <input type="file" id="fileup" name="fileup" multiple/>
     <button type="submit">Upload Images and create book.</button>
 </form>
