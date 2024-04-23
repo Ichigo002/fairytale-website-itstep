@@ -35,21 +35,11 @@
           <h3>Titolo </h3>
           <p>Breve descrizione</p>
         </div></a>
-        <a href="{{ route('profile.edit') }}"><div class="grid_elements">
-          <img src="{{asset('build/assets/images/book/frontcover.png')}}" alt="Thumbnail"/>
-          <h3>Titolo </h3>
-          <p>Breve descrizione</p>
-        </div></a>
-        <a href="{{ route('profile.edit') }}"><div class="grid_elements">
-          <img src="{{asset('build/assets/images/book/frontcover.png')}}" alt="Thumbnail"/>
-          <h3>Titolo </h3>
-          <p>Breve descrizione</p>
-        </div></a>
-        <a href="{{ route('profile.edit') }}"><div class="grid_elements">
-          <img src="{{asset('build/assets/images/book/frontcover.png')}}" alt="Thumbnail"/>
-          <h3>Titolo </h3>
-          <p>Breve descrizione</p>
-        </div></a>
+
+        @foreach($books as $book)
+          
+        @endforeach
+
 
     </main>
 

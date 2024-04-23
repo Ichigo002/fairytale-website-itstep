@@ -1,8 +1,6 @@
 <header>
       <div class="logo">
-      <a href="{{ route('home') }}">
-       <img class="logo-img" src="{{asset('build/assets/images/book/frontcover.png')}}"/>
-        </a>  
+      @include("components/application-logo")
     </div>
       <!-- add this to your header -->
        <div id="google_translate_element"></div> 
