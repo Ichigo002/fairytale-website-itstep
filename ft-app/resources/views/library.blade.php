@@ -30,15 +30,22 @@
      <br/>
 
     <main>
-        <a href="{{ route('profile.edit') }}"><div class="grid_elements">
-          <img src="{{asset('build/assets/images/book/frontcover.png')}}" alt="Thumbnail"/>
-          <h3>Titolo </h3>
-          <p>Breve descrizione</p>
-        </div></a>
 
         @foreach($books as $book)
-          
+          <a href="{{ route('library.read', $book->id) }}"><div class="grid_elements">
+            <img src="{{asset('build/assets/images/book/frontcover.png')}}" alt="Thumbnail"/>
+            <h3>{{ $book->title }}</h3>
+            <p>{{ $book->desc }}</p>
+          </div></a>
         @endforeach
+
+        @auth
+          <a href="{{ route('library.book_creator') }}"><div class="grid_elements">
+            <img src="{{asset('build/assets/images/book/frontcover.png')}}" alt="Thumbnail"/>
+            <h3>ADD NEW</h3>
+            <p>Adds new book to library</p>
+          </div></a>
+        @endauth
 
 
     </main>

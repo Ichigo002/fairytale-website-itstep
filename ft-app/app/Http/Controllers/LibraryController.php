@@ -14,4 +14,14 @@ class LibraryController extends Controller
 
         return view('library', ['books' => $books]);
     }
+
+    public function read($id)
+    {
+        return view("reader");
+    }
+
+    public function book_creator() 
+    {
+        return view("book_creator");
+    }
 }
